@@ -1,11 +1,91 @@
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Reservia</h1>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="images/Reservia.svg" alt="logo Reservia">
+                </li>
+                <li> 
+                    <a href="#section_1" class="active"> Hébergements</a>
+                </li>
+                <li>
+                    <a href="#section_2" class="active"> Activités</a>
+                </li>
+                <li>
+                    <a href="#" class="active"> S'inscrire</a>
+                </li>
+            </ul>   
+        </nav>
+
+        <div id="description_titre">
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre-ville ou en pleine nature</p>
+        </div>
+
+        <div id="Recherche">
+        <form method="post" action="traitement.php">
+            <span class="search-location">
+                <i class="fas fa-map-marker-alt">
+                </i>
+            </span>
+            <input type="search" name="ville" placeholder="Marseille, France">
+            <input type="submit" value="rechercher">
+        </form>
+        </div>
+
+        <div class="filtres">
+            <span class="filtres_titre">Filtres</span>
+            <div class="options_filtres">
+                <input name="type_hebergement" id="economique" type="checkbox" value="economique">
+                <label for="economique" class="options_filtres">
+                    <span class="icone_options_filtres">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </span>
+                    <span class="options_filtres_label">Économique</span>
+                </label>
+                <input name="type_hebergement" id="familial" type="checkbox" value="familial">
+                <label for="familial" class="options_filtres">
+                    <span class="icone_options_filtres">
+                        <i class="fas fa-child"></i>
+                    </span>
+                    <span class="options_filtres_label">Familial</span>
+                </label>
+                <input name="type_hebergement" id="romantique" type="checkbox" value="romantique">
+                <label for="romantique" class="options_filtres">
+                    <span class="icone_options_filtres">
+                        <i class="fas fa-heart"></i>
+                    </span>
+                    <span class="options_filtres_label">Romantique</span>
+                </label>
+                <input name="type_hebergement" id="animaux-autorises" type="checkbox" value="animaux-autorises">
+                <label for="animaux animaux-autorises" class="options_filtres">
+                    <span class="icone_options_filtres">
+                        <i class="fas fa-dog"></i>
+                    </span>
+                    <span class="options_filtres_label">Animaux autorisés</span>
+                </label>
+            </div>
+        </div>
+
+
+
+
+    </header>
+    <div id="section_1">
+        <div>
+            <h2>Hébèrgements à Marseille</h2>
+        </div>
+        <div>
+            <h2>Les plus populaires</h2>
+        </div>
+    </div>
 </body>
 </html>
