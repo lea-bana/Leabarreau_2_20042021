@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservia</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 <body>
     <header>
         <nav>
             <ul>
                 <li>
-                    <img src="images/Reservia.svg" alt="logo Reservia">
+                    <img src="images/Reservia.svg" alt="logo_reservia">
                 </li>
                 <li> 
                     <a href="#section_1" class="active"> Hébergements</a>
@@ -25,47 +26,51 @@
             </ul>   
         </nav>
 
-        <div id="description_titre">
+        <div id="title_description">
             <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en pleine nature</p>
         </div>
 
-        <div id="Recherche">
+        <div id="search">
         <form method="post" action="traitement.php">
             <span class="search-location">
                 <i class="fas fa-map-marker-alt">
                 </i>
             </span>
             <input type="search" name="ville" placeholder="Marseille, France">
-            <input type="submit" value="rechercher">
+            <button type="submit">Rechercher</button>
         </form>
         </div>
 
-        <div class="filtres">
+        <div id="filtres">
             <span class="filtres_titre">Filtres</span>
             <div class="options_filtres">
-                <input name="type_hebergement" id="economique" type="checkbox" value="economique">
+
+                <button name="type_hosting" id="economique" type="button" value="economique">
                 <label for="economique" class="options_filtres">
                     <span class="icone_options_filtres">
                         <i class="fas fa-money-bill-wave"></i>
                     </span>
                     <span class="options_filtres_label">Économique</span>
                 </label>
-                <input name="type_hebergement" id="familial" type="checkbox" value="familial">
+
+                <button name="type_hosting" id="familial" type="button" value="familial">
                 <label for="familial" class="options_filtres">
                     <span class="icone_options_filtres">
                         <i class="fas fa-child"></i>
                     </span>
                     <span class="options_filtres_label">Familial</span>
                 </label>
-                <input name="type_hebergement" id="romantique" type="checkbox" value="romantique">
+
+                <button name="type_hosting" id="romantique" type="button" value="romantique">
                 <label for="romantique" class="options_filtres">
                     <span class="icone_options_filtres">
                         <i class="fas fa-heart"></i>
                     </span>
                     <span class="options_filtres_label">Romantique</span>
                 </label>
-                <input name="type_hebergement" id="animaux-autorises" type="checkbox" value="animaux-autorises">
+
+                <button name="type_hosting" id="animaux-autorises" type="button" value="animaux-autorises">
                 <label for="animaux animaux-autorises" class="options_filtres">
                     <span class="icone_options_filtres">
                         <i class="fas fa-dog"></i>
@@ -74,17 +79,97 @@
                 </label>
             </div>
         </div>
-
-
-
-
+        <p class="info">
+            <span class="info">
+                <i class="fas fa-info"></i>
+            </span>
+             Plus de 500 logements sont disponibles dans cette ville 
+        </p>
     </header>
+
+
+
     <div id="section_1">
         <div>
-            <h2>Hébèrgements à Marseille</h2>
+            <h2>Hébergements à Marseille</h2>
         </div>
-        <div>
-            <h2>Les plus populaires</h2>
+        
+        <div class="container">
+
+            <a href="#">
+                <figure class="hosting1Figure">
+                    <img class="hosting1img" src="images/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="bunk_beds_city_view">
+                    <figcaption class="hosting1figureCaption">
+                        <h3 class="hosting1figureCaptiontitle">Auberge de la Cannebière</h3>
+                    </figcaption>
+                </figure>
+                <p class="hosting1Figure">Nuit à partir de<strong class="hosting1price">25€</strong>~
+                </p>
+                <div class="hosting1notation">
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="false"></i>
+                </div>
+            </a>
+
+            <a href="#">
+                <figure class="hosting2Figure">
+                    <img class="hosting2img" src="images/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="harbor_hotel">
+                    <figcaption class="hosting2figureCaption">
+                        <h3 class="hosting2figureCaptiontitle">Hôtel du port</h3>
+                    </figcaption>
+                </figure>
+                <p class="hosting2Figure">Nuit à partir de<strong class="hosting2prix">52€</strong>~
+                </p>
+                <div class="hosting2notation">
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                </div>
+            </a>
+
+            <a href="#">
+                <figure class="hosting3Figure">
+                    <img class="hosting3img" src="images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="seagulls_hotel">
+                    <figcaption class="hosting3figureCaption">
+                        <h3 class="hosting3figureCaptiontitle">Hôtel Les mouettes</h3>
+                    </figcaption>
+                </figure>
+                <p class="hosting3Figure">Nuit à partir de<strong class="hosting3price">76€</strong>~
+                </p>
+                <div class="hosting3notation">
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="false"></i>
+                </div>
+            </a>
+
+            <a href="#">
+                <figure class="hosting4Figure">
+                    <img class="hosting4img" src="images/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="seagulls_hotel">
+                    <figcaption class="hosting3figureCaption">
+                        <h3 class="hosting3figureCaptiontitle">Hôtel Les mouettes</h3>
+                    </figcaption>
+                </figure>
+                <p class="hosting3Figure">Nuit à partir de<strong class="hosting3price">76€</strong>~
+                </p>
+                <div class="hosting3notation">
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="true"></i>
+                    <i class="fas fa-star" data-active="false"></i>
+                </div>
+            </a>
+
+
+
         </div>
     </div>
 </body>
