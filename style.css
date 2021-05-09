@@ -1,3 +1,30 @@
+/* Déf des polices */
+
+@font-face
+{
+    font-family:'Raleway';
+    src: url('polices/Raleway-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Eléments principaux de la page */
+
 body, html {
     width: 100%;
+    font-family:'Raleway';
+    margin: auto;
+    
+}
+
+#title_description
+
+#section_1 {
+    display: flex;
+}
+
+@media (max-width: 576px) {
+    #section_1 {
+        flex-direction: column;
+    }
 }
