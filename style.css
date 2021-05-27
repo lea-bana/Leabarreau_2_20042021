@@ -224,6 +224,31 @@ h1 {
   h1 {
     font-size: 20px;
   }
+
+  .button_search {
+    display: none;
+  }
+  .button_search_icon {
+    display: block;
+  }
+
+  #filters {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    width: 100%;
+  }
+
+  .filters_options {
+    display: flex;
+    flex-wrap: wrap;
+    width: 105%;
+    justify-content: center;
+  }
+
+  .info {
+    width: 110%;
+  }
 }
 
 /* fin du Header */
@@ -398,6 +423,37 @@ h2 {
   color: black;
 }
 /*Fin de la partie Hebergements*/
+
+/*media-queries pour les hebergements*/
+
+@media all and (max-width: 480px) {
+  #Marseille_populars {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+
+  #populars {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: #f2f2f2;
+    padding: 40px;
+    height: fit-content;
+    margin-bottom: 20%;
+  }
+
+  .article_pop a {
+    width: 310px;
+  }
+  .article img {
+    width: 300px;
+  }
+}
 
 #Marseille_activities {
   margin-top: 5%;
