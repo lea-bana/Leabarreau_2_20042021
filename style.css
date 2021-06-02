@@ -6,6 +6,10 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Raleway Bold";
+  src: url("polices/Raleway-ExtraBold.ttf");
+}
 
 /* Eléments principaux de la page */
 
@@ -191,14 +195,15 @@ h1 {
 
 /*media-queries pour le header*/
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 600px) {
   body,
   html {
     font-family: "Raleway", "Arial", "sans-serif";
+    width: 100%;
   }
   nav {
     display: flex;
-    margin: 15px;
+    margin: 2%;
     box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -208,9 +213,26 @@ h1 {
 
   #hostings {
     margin-top: 10%;
+    order: 3;
     padding-bottom: 10%;
+    font-size: large;
+    width: 50%;
+    text-align: center;
     margin-left: 0%;
     border-bottom: 2px #c0c0c0 solid;
+  }
+  #activities {
+    margin-top: 10%;
+    order: 4;
+    padding-bottom: 10%;
+    font-size: large;
+    width: 50%;
+    text-align: center;
+    margin-left: 0%;
+    border-bottom: 2px #c0c0c0 solid;
+  }
+  #signup {
+    margin-left: 50%;
   }
 
   #hostings a:hover,
@@ -228,28 +250,38 @@ h1 {
   .button_search {
     display: none;
   }
+
   .button_search_icon {
     display: block;
+    padding: 10px 10px 10px 10px;
+    background: #0065fc;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+    border: 5px;
   }
 
   #filters {
     display: flex;
     flex-direction: column;
     margin-left: 2%;
-    width: 100%;
+    align-items: unset;
   }
 
   .filters_options {
     display: flex;
     flex-wrap: wrap;
-    width: 105%;
-    justify-content: center;
-  }
-
-  .info {
-    width: 110%;
+    width: 100%;
+    justify-content: flex-start;
   }
 }
+@media all and (min-width: 1024px) {
+  .button_search_icon {
+    display: none;
+  }
+}
+
+/*fin des media queries pour le header*/
 
 /* fin du Header */
 
@@ -426,34 +458,45 @@ h2 {
 
 /*media-queries pour les hebergements*/
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 600px) {
   #Marseille_populars {
     display: flex;
     flex-wrap: wrap-reverse;
     flex-direction: row;
     justify-content: space-around;
     align-content: space-around;
+    width: 100%;
   }
 
-  #populars {
+  #populars,
+  #Marseille_hostings {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background-color: #f2f2f2;
-    padding: 40px;
     height: fit-content;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
+    border-radius: unset;
+    max-width: unset;
+    width: 100%;
   }
 
-  .article_pop a {
-    width: 310px;
+  #populars {
+    background-color: #f2f2f2;
+  }
+
+  #Marseille_hostings {
+    background-color: unset;
   }
   .article img {
     width: 300px;
   }
+  #Marseille_activities {
+    margin-top: unset;
+  }
 }
+/* fin des media queries hebergements*/
 
 #Marseille_activities {
   margin-top: 5%;
@@ -476,10 +519,11 @@ h2 {
 .activityMarseilleFigure {
   margin: initial;
 }
-.activityMarseilleimg1 {
+.activityMarseilleimg1,
+.activityMarseilleimg4 {
   object-fit: cover;
   width: 320px;
-  height: 480px;
+  height: 532px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -498,28 +542,14 @@ h2 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.activityMarseilleimg4 {
-  object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 320px;
-  height: 480px;
-}
 
-.activityMarseilleimg5 {
-  object-fit: cover;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  width: 320px;
-  height: 220px;
-}
-
+.activityMarseilleimg5,
 .activityMarseilleimg6 {
   object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 320px;
-  height: 220px;
+  height: 228px;
 }
 
 .thumbnail {
@@ -548,6 +578,17 @@ h2 {
   box-sizing: border-box;
 }
 
+/* Media queries activities */
+
+@media all and (max-width: 600px) {
+  #Marseille_activities img {
+    height: 120px;
+    width: 310px;
+  }
+}
+
+/*fin des media queries activities*/
+
 footer {
   flex-wrap: wrap;
   background-color: #f2f2f2;
@@ -558,4 +599,19 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 20px 20px 0px 20px;
+}
+
+.footer_column_title {
+  font-weight: bold;
+}
+
+/*media queries footer*/
+
+@media all and (max-width: 600px) {
+  .footer_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: none;
+  }
 }
