@@ -32,10 +32,12 @@ nav {
   justify-content: space-around;
   font-size: small;
   text-decoration: none;
+  margin-top: 10px;
 }
 
 #logo {
   display: flex;
+  margin-left: 30px;
 }
 
 #hostings {
@@ -44,7 +46,10 @@ nav {
 }
 
 #hostings a,
-#activities a,
+#activities a {
+  text-decoration: none;
+  color: #677179;
+}
 #signup a {
   text-decoration: none;
   color: #0065fc;
@@ -58,21 +63,25 @@ nav {
 #activities a:hover,
 #signup a:hover {
   border-top: 3px solid #0065fc;
-  padding-top: 12px;
-  margin-top: none;
+  padding-top: 22px;
+  margin-top: unset;
   color: #0065fc;
 }
 
 #title_description {
   display: flex;
-  margin-left: 2%;
+  margin-left: 50px;
   flex-direction: column;
+}
+#title_description p {
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 h1 {
   font-family: "Raleway";
   font-weight: 900;
-  font-size: 30px;
+  font-size: 24px;
   margin-bottom: 1px;
 }
 
@@ -80,47 +89,51 @@ h1 {
   display: flex;
   flex-direction: row;
   text-align: center;
-  margin-left: 2%;
+  margin-left: 50px;
+  margin-bottom: 30px;
 }
 
 .form_search {
   display: flex;
-  width: 60px;
   border: 10px;
   background-color: #f2f2f2;
   padding: 20px;
   text-align: center;
   font-family: "Raleway";
   font-size: 20px;
-  border-radius: 15px 0 0 15px;
-  padding: 0px 0 0px 0;
+  border-radius: 15px 15px 15px 15px;
+  padding: 0px;
 }
 .search-location {
   display: block;
-  padding: 10px;
+  padding: 10px 15px;
 }
-.input-search {
+
+.input_search {
   display: flex;
-  justify-content: flex-start;
+  font-family: Raleway Bold;
+  border-color: #f2f2f2;
+  border-style: solid;
+  padding-right: 90px;
+  text-align: center;
 }
 .button_search {
   display: block;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Raleway";
   padding: 10px 10px 10px 10px;
   background: #0065fc;
   color: #ffffff;
   cursor: pointer;
   border-radius: 0 15px 15px 0;
-  width: 150px;
   border: 5px;
 }
 #filters {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: 2%;
+  margin-left: 50px;
 }
 
 .filters_title {
@@ -143,12 +156,13 @@ h1 {
   align-items: center;
   margin-right: 1.5rem;
   border: 2px solid #d9d9d9;
+  background-color: transparent;
   border-radius: 2rem;
   margin-bottom: 1rem;
   cursor: pointer;
   transition-duration: 0.5s;
   font-weight: bold;
-  height: 50px;
+  height: 40px;
   padding-right: 20px;
 }
 
@@ -158,8 +172,8 @@ h1 {
   border-color: #deebff;
 }
 .filters_icons {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: #deebff;
   border-radius: 50%;
   display: flex;
@@ -174,14 +188,16 @@ h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #aaa9a9;
-  margin-left: 2%;
+  color: black;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 .info_icon {
   display: flex;
   align-items: center;
   line-height: 20px;
+  margin-right: 10px;
   color: #0065fc;
   position: relative;
   right: 2px;
@@ -211,37 +227,60 @@ h1 {
     text-decoration: none;
   }
 
-  #hostings {
-    margin-top: 10%;
-    order: 3;
-    padding-bottom: 10%;
-    font-size: large;
-    width: 50%;
-    text-align: center;
-    margin-left: 0%;
-    border-bottom: 2px #c0c0c0 solid;
+  #logo {
+    margin-left: 20px;
   }
+
+  #hostings,
   #activities {
     margin-top: 10%;
-    order: 4;
-    padding-bottom: 10%;
+    order: 3;
+    padding-bottom: 4%;
     font-size: large;
     width: 50%;
     text-align: center;
     margin-left: 0%;
-    border-bottom: 2px #c0c0c0 solid;
+    /* border-bottom: 2px #c0c0c0 solid; */
+  }
+  #activities {
+    order: 4;
   }
   #signup {
     margin-left: 50%;
+    margin-right: 5%;
   }
-
-  #hostings a:hover,
+  /* #hostings a:hover,
   #activities a:hover,
   #signup a:hover {
-    border-bottom: 3px solid #0065fc;
-    padding-bottom: 20px;
-    margin-top: none;
+    border-top: none;
+    padding-top: 22px;
+    margin-top: unset;
     color: #0065fc;
+  } */
+  #hostings a,
+  #activities a {
+    display: block;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #c0c0c0;
+  }
+  #hostings a:hover,
+  #activities a:hover,
+  #activities a:active,
+  #hostings a:active {
+    display: block;
+    padding-top: 0;
+    border-bottom: 2px solid #0065fc;
+    border-top: none;
+    padding-bottom: 20px;
+    margin-top: unset;
+    color: #0065fc;
+  }
+
+  #title_description {
+    margin-left: 20px;
+  }
+  #search {
+    margin-left: 20px;
   }
   h1 {
     font-size: 20px;
@@ -260,11 +299,18 @@ h1 {
     border-radius: 10px 10px 10px 10px;
     border: 5px;
   }
+  .info {
+    margin-left: 20px;
+  }
+  .info_icon {
+    width: 30px;
+    height: 25px;
+  }
 
   #filters {
     display: flex;
     flex-direction: column;
-    margin-left: 2%;
+    margin-left: 20px;
     align-items: unset;
   }
 
@@ -275,6 +321,36 @@ h1 {
     justify-content: flex-start;
   }
 }
+
+@media all and (min-width: 600px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: unset;
+    font-size: small;
+    text-decoration: none;
+    width: 100%;
+  }
+  #hostings,
+  #activities,
+  #signup {
+    margin-top: 0%;
+    margin-right: 2%;
+  }
+  #hostings {
+    margin-left: 50%;
+  }
+  #activities,
+  #signup,
+  #logo {
+    margin-left: 2%;
+  }
+
+  .button_search_icon {
+    display: none;
+  }
+}
+
 @media all and (min-width: 1024px) {
   .button_search_icon {
     display: none;
@@ -306,11 +382,10 @@ h1 {
 #populars {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-content: space-around;
   background-color: #f2f2f2;
-  padding: 30 30 30 30;
+  padding: 30px 30px 30px 30px;
   border-radius: 20px;
   max-width: 35%;
   height: fit-content;
@@ -318,17 +393,17 @@ h1 {
 
 .container_Marseille_hostings {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   row-gap: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .container_populars_hostings {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 30px;
   justify-content: space-around;
-  align-content: space-around;
   height: 100%;
 }
 
@@ -394,18 +469,20 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 
 h3 {
   font-weight: bold;
   font-size: 18px;
+  margin-left: 20px;
   color: black;
   position: relative;
   padding-right: 5px;
 }
 h4 {
-  margin-block-start: 3px;
+  margin-left: 3px;
+  margin-top: 0px;
 }
 
 .article h3 {
@@ -423,6 +500,7 @@ h2 {
   flex-direction: row;
   height: fit-content;
   margin-bottom: 20px;
+  margin-top: 0px;
 }
 
 .article img {
@@ -447,7 +525,7 @@ h2 {
 .show_more {
   display: flex;
   width: 100%;
-  margin: none;
+  margin: unset;
 }
 .show_more a {
   display: flex;
@@ -472,7 +550,7 @@ h2 {
   #Marseille_hostings {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+
     justify-content: center;
     align-content: center;
     height: fit-content;
@@ -496,18 +574,54 @@ h2 {
     margin-top: unset;
   }
 }
+@media all and (min-width: 600px) and (max-width: 1024px) {
+  #Marseille_populars {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
+  }
+
+  #populars,
+  #Marseille_hostings {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+    margin-bottom: 10%;
+    border-radius: unset;
+    max-width: unset;
+    width: 100%;
+  }
+  #populars {
+    background-color: unset;
+  }
+  .container_populars_hostings {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 2rem;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
+  }
+}
 /* fin des media queries hebergements*/
 
 #Marseille_activities {
   margin-top: 5%;
   height: fit-content;
-  padding: 30px 30px 30px 30px;
+  padding: 30px 30px 30px 50px;
 }
 
 .container_activities {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .container_activities a {
   display: flex;
@@ -523,7 +637,7 @@ h2 {
 .activityMarseilleimg4 {
   object-fit: cover;
   width: 320px;
-  height: 532px;
+  height: 450px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -538,7 +652,7 @@ h2 {
   object-fit: cover;
   order: 3;
   width: 320px;
-  height: 224px;
+  height: 140px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -549,7 +663,7 @@ h2 {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   width: 320px;
-  height: 228px;
+  height: 185px;
 }
 
 .thumbnail {
@@ -598,7 +712,14 @@ footer {
 .footer_container {
   display: flex;
   justify-content: space-between;
-  margin: 20px 20px 0px 20px;
+  margin: 20px 20px 0px 50px;
+}
+.footer_column1 {
+  flex-grow: 1;
+}
+.footer_column2,
+.footer_column3 {
+  flex-grow: 2;
 }
 
 .footer_column_title {
@@ -612,6 +733,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: none;
+    margin: unset;
   }
 }
