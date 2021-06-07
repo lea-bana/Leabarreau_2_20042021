@@ -219,16 +219,18 @@ h1 {
   }
   nav {
     display: flex;
-    margin: 2%;
+    margin: unset;
+    padding-top: 5%;
     box-sizing: border-box;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: space-between;
     font-size: small;
     text-decoration: none;
   }
 
   #logo {
-    margin-left: 20px;
+    width: 30%;
   }
 
   #hostings,
@@ -246,17 +248,13 @@ h1 {
     order: 4;
   }
   #signup {
-    margin-left: 50%;
-    margin-right: 5%;
+    width: 40%;
+    text-align: right;
+    padding-right: 20px;
   }
-  /* #hostings a:hover,
-  #activities a:hover,
   #signup a:hover {
     border-top: none;
-    padding-top: 22px;
-    margin-top: unset;
-    color: #0065fc;
-  } */
+  }
   #hostings a,
   #activities a {
     display: block;
@@ -280,7 +278,8 @@ h1 {
     margin-left: 20px;
   }
   #search {
-    margin-left: 20px;
+    width: 90%;
+    margin-left: 5%;
   }
   h1 {
     font-size: 20px;
@@ -296,7 +295,8 @@ h1 {
     background: #0065fc;
     color: #ffffff;
     cursor: pointer;
-    border-radius: 10px 10px 10px 10px;
+    width: 13%;
+    border-radius: 15px;
     border: 5px;
   }
   .info {
@@ -305,6 +305,12 @@ h1 {
   .info_icon {
     width: 30px;
     height: 25px;
+  }
+  .form_search {
+    width: 100%;
+  }
+  .input_search {
+    width: 90%;
   }
 
   #filters {
@@ -395,7 +401,6 @@ h1 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  row-gap: 10px;
   justify-content: space-between;
 }
 
@@ -430,9 +435,13 @@ h1 {
   margin: inherit;
 }
 
+.article_pop {
+  width: 100%;
+}
+
 .article_pop a {
   display: flex;
-  width: 360px;
+  width: 100%;
   text-decoration: none;
   background-color: white;
   border-radius: 20px;
@@ -443,6 +452,7 @@ h1 {
 }
 .hostingnight {
   color: black;
+  margin-left: 10px;
 }
 
 .article .hostingnight {
@@ -475,7 +485,7 @@ h1 {
 h3 {
   font-weight: bold;
   font-size: 18px;
-  margin-left: 20px;
+  margin-left: 10px;
   color: black;
   position: relative;
   padding-right: 5px;
@@ -526,6 +536,8 @@ h2 {
   display: flex;
   width: 100%;
   margin: unset;
+  margin-top: 11px;
+  margin-bottom: 11px;
 }
 .show_more a {
   display: flex;
@@ -550,14 +562,16 @@ h2 {
   #Marseille_hostings {
     display: flex;
     flex-direction: column;
-
     justify-content: center;
-    align-content: center;
+    align-content: unset;
     height: fit-content;
     margin-bottom: 10%;
     border-radius: unset;
     max-width: unset;
     width: 100%;
+  }
+  .container_Marseille_hostings {
+    flex-direction: column;
   }
 
   #populars {
@@ -568,10 +582,7 @@ h2 {
     background-color: unset;
   }
   .article img {
-    width: 300px;
-  }
-  #Marseille_activities {
-    margin-top: unset;
+    width: 100%;
   }
 }
 @media all and (min-width: 600px) and (max-width: 1024px) {
@@ -695,9 +706,13 @@ h2 {
 /* Media queries activities */
 
 @media all and (max-width: 600px) {
+  #Marseille_activities {
+    margin-top: unset;
+    padding: 30px;
+  }
   #Marseille_activities img {
     height: 120px;
-    width: 310px;
+    width: 100%;
   }
 }
 
@@ -713,6 +728,8 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 20px 20px 0px 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .footer_column1 {
   flex-grow: 1;
@@ -734,5 +751,6 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     margin: unset;
+    padding: 30px;
   }
 }
