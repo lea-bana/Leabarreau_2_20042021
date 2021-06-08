@@ -332,7 +332,6 @@ h1 {
   nav {
     display: flex;
     align-items: center;
-    justify-content: unset;
     font-size: small;
     text-decoration: none;
     width: 100%;
@@ -344,16 +343,39 @@ h1 {
     margin-right: 2%;
   }
   #hostings {
-    margin-left: 50%;
+    margin-left: 40%;
   }
   #activities,
-  #signup,
-  #logo {
+  #signup {
     margin-left: 2%;
+  }
+  #title_description {
+    margin-left: 30px;
+  }
+
+  #search {
+    margin-left: 30px;
   }
 
   .button_search_icon {
     display: none;
+  }
+  #filters {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 30px;
+  }
+  .filters_options {
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .info {
+    margin-left: 30px;
+    margin-bottom: 10px;
   }
 }
 
@@ -603,7 +625,7 @@ h2 {
     justify-content: center;
     align-content: center;
     height: fit-content;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     border-radius: unset;
     max-width: unset;
     width: 100%;
@@ -615,10 +637,12 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    row-gap: 2rem;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-between;
+    align-content: space-between;
     width: 100%;
+  }
+  .article_pop {
+    width: fit-content;
   }
 }
 /* fin des media queries hebergements*/
@@ -715,6 +739,12 @@ h2 {
     width: 100%;
   }
 }
+@media all and (min-width: 600px) and (max-width: 1024px) {
+  #Marseille_activities {
+    margin-top: unset;
+    padding: 30px;
+  }
+}
 
 /*fin des media queries activities*/
 
@@ -752,5 +782,14 @@ footer {
     justify-content: space-around;
     margin: unset;
     padding: 30px;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 1024px) {
+  .footer_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    margin: unset;
   }
 }
