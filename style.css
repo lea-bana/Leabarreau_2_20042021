@@ -592,7 +592,9 @@ h2 {
     border-radius: unset;
     max-width: unset;
     width: 100%;
+    padding: 30px 30px 0px 30px;
   }
+
   .container_Marseille_hostings {
     flex-direction: column;
   }
